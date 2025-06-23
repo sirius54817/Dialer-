@@ -77,6 +77,13 @@ android {
         val currentJavaVersionFromLibs = JavaVersion.valueOf(libs.versions.app.build.javaVersion.get().toString())
         sourceCompatibility = currentJavaVersionFromLibs
         targetCompatibility = currentJavaVersionFromLibs
+
+        // Add explicit Java toolchain configuration for Java 21
+        isCoreLibraryDesugaringEnabled = true
+    }
+
+    kotlin {
+        jvmToolchain(21)
     }
 
     tasks.withType<KotlinCompile> {
@@ -92,7 +99,11 @@ android {
 }
 
 dependencies {
-    implementation(libs.simple.tools.commons)
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
+    implementation(libs.simple.tools.commons) {
+        // Exclude the problematic rtl-viewpager dependency
+        exclude(group = "com.github.duolingo", module = "rtl-viewpager")
+    }
     implementation(libs.indicator.fast.scroll)
     implementation(libs.autofit.text.view)
     implementation(libs.kotlinx.serialization.json)

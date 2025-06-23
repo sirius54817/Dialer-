@@ -18,7 +18,7 @@
         android:fillViewport="true"
         android:scrollbars="none">
 
-        <com.simplemobiletools.commons.views.MyViewPager
+        <com.simplemobiletools.dialer.views.CustomViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="0dp"

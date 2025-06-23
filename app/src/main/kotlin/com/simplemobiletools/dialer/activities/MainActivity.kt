@@ -38,6 +38,7 @@ import com.simplemobiletools.dialer.fragments.FavoritesFragment
 import com.simplemobiletools.dialer.fragments.MyViewPagerFragment
 import com.simplemobiletools.dialer.fragments.RecentsFragment
 import com.simplemobiletools.dialer.helpers.*
+import com.simplemobiletools.dialer.views.CustomViewPager
 import me.grantland.widget.AutofitHelper
 
 class MainActivity : SimpleActivity() {
