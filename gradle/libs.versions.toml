@@ -13,8 +13,8 @@ autofitTextView = "0.2.1"
 app-build-compileSDKVersion = "34"
 app-build-targetSDK = "34"
 app-build-minimumSDK = "23"
-app-build-javaVersion = "VERSION_21"
-app-build-kotlinJVMTarget = "21"
+app-build-javaVersion = "VERSION_17"
+app-build-kotlinJVMTarget = "17"
 #versioning
 app-version-appId = "com.simplemobiletools.dialer"
 app-version-versionCode = "57"
@@ -31,3 +31,4 @@ autofit-text-view = { module = "me.grantland:autofittextview", version.ref = "au
 android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
